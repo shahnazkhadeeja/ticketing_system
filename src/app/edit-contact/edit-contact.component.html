@@ -1,0 +1,55 @@
+
+<h1 mat-dialog-title>
+    <img src="assets/resume.png" alt="">
+    Edit Details</h1>
+
+<div matdialog-content>
+<mat-form-field appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Second Name</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Mobile Number</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Landline Number (Optional)</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Fax (Optional)</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Language</mat-label>
+    <mat-select>
+      <mat-option value="one">English</mat-option>
+      <mat-option value="two">Hindi</mat-option>
+    </mat-select>
+  </mat-form-field>
+ 
+  <mat-form-field appearance="fill">
+    <mat-label>Preferred Language(Optional)</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Time Zone</mat-label>
+    <input matInput>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button  cdkFocusInitial color="primary">Update</button>
+  </div>

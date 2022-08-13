@@ -1,0 +1,33 @@
+<mat-card class="ticket">
+<h1 mat-dialog-title>
+    <img src="assets/edit-ticket.png" alt="">
+    Edit Tickets</h1>
+<mat-card-content>
+<div matdialog-content>
+<mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>Contact</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="example-full-width">
+    <mat-label>Subject</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+
+    <mat-label><h2>Description</h2></mat-label>
+    <angular-editor formControlName="htmlContent" [config]="editorConfig"></angular-editor> 
+
+   
+
+</div>
+</mat-card-content>
+<mat-card-footer>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        <button mat-button  cdkFocusInitial color="primary">Update</button>
+      </div>
+</mat-card-footer>
+
+
+</mat-card>

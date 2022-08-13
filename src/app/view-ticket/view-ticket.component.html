@@ -1,0 +1,394 @@
+
+
+ <mat-toolbar>
+    <span class="span_head">Ticket Details</span>
+    <span class="example-spacer"></span>
+    <button mat-button>+ New Ticket</button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>notifications_none</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>search</mat-icon>
+    </button>
+  </mat-toolbar>
+
+
+
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>grade</mat-icon>
+    </button>
+    <button mat-button color="accent">  <mat-icon>done</mat-icon> Reply</button>
+    <button mat-button color="accent" (click)="openAddbox()" ><mat-icon>add_box</mat-icon>Add Note</button>
+    <button mat-button color="accent" (click)="openForwardbox()" ><mat-icon>forward</mat-icon>Forward</button>
+    <button mat-button color="accent"><mat-icon>group</mat-icon>Discuss</button>
+    <button mat-button color="accent"><mat-icon>close</mat-icon>Close</button>
+    <button mat-button color="accent"><mat-icon> call_merge</mat-icon>Merge</button>
+    <button mat-button color="accent"  (click)="openDeletebox()"><mat-icon>delete</mat-icon>Delete</button>
+    <button mat-button color="accent"><mat-icon>dashboard_customize</mat-icon></button>
+    <span class="example-spacer"></span>
+    <!-- <button mat-button>+ New Ticket</button> -->
+    <button mat-button>
+        <mat-icon> screen_share</mat-icon>Show Activities
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>search</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="p-5">
+  <div class="container" class="main-container">
+
+    <div class="row">
+
+   <div class="col-md-6">
+    <!---------------------------First mat card---------------------------------------->
+    <mat-card class="title-space">
+           <div class="row">
+           
+            <div class="col-sm-1">
+                <img src="assets/grammar.png"  alt="">
+            </div>
+            <div class="col-sm-6" >
+                <h4>Open</h4>
+                <span>First response </span>
+                <span>Due in 6 days <button mat-button  (click)="openEditbox()"  >edit</button></span>
+                <br>
+                <span><button mat-flat-button class="mat-btn">New</button></span>
+                <span style="color: blue;" ><button mat-flat-button >Add tags</button></span>
+            </div>
+        
+           </div>
+        </mat-card>
+<!---------------------------Second mat card---------------------------------------->
+        <mat-card class="title-space">
+           
+            <mat-card-title>
+                <img src="assets/layers.png" alt="">&nbsp;&nbsp;
+                <span>Refund request order #123</span>
+            </mat-card-title>
+            <mat-card-subtitle>
+                <span><b>Sam K</b> reported and issue</span>
+                <p>36 minutes ago</p>
+                <p>created by:</p>
+            </mat-card-subtitle>
+                    
+                <mat-card-content>
+
+                    <p>hello,</p>
+                    <p>
+                        I’m writing to you to express my disappoint about your check-in online service. I tried to check-in my flight in your app so many times, unfortunately there was a problem all day and I couldn’t do it, so I must have to do the line at the airport, in spite of the fact that I had bought a fast pass ticket. At the reception I was told that there were no seats available, consequently, I had to wait until the next flight in addition of paying again my ticket. I would like to be recompensed for this situation by at least a complete refund of the ticket.
+                    </p>
+
+                    <p>
+                        Thanks,
+                    </p>
+                    <p>
+                        Sam K
+                    </p>
+                </mat-card-content>
+
+                <mat-card-actions>
+                    <button mat-button>
+                        <img src="assets/clipboard.png" alt=""> &nbsp;&nbsp;
+                        Add Summary</button>
+                </mat-card-actions>
+
+              </mat-card>
+<!---------------------------Bottom Option Section---------------------------------------->
+
+            
+            <mat-card  class="title-space">
+              <img src="assets/letter-j.png" alt="">
+              <button mat-button class="mat-btn1"> <img class="icon-img" src="assets/reply.png" alt=""> &nbsp;&nbsp;  Reply</button>
+              <button mat-button class="mat-btn1"> <img class="icon-img" src="assets/add.png" alt="">  &nbsp;&nbsp;Add Note</button>
+              <button mat-button class="mat-btn1" > <img class="icon-img" src="assets/fast-forward.png" alt=""> &nbsp;&nbsp;Forward </button>
+              <button mat-button class="mat-btn1"> <img class="icon-img" src="assets/message.png" alt=""> &nbsp;&nbsp; Discussion </button>
+            </mat-card>
+          
+        </div>
+
+
+        <div class="col-md-2">
+            
+        <mat-card class="title-space">
+           
+            <mat-card-title>
+                <img src="assets/control.png" alt="">&nbsp;&nbsp;
+                <span>Properties</span>
+            </mat-card-title>
+           
+                <mat-card-content>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Priority</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="legacy">
+                    <mat-label> Status</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="legacy">
+                    <mat-label> Assign To</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="legacy">
+                    <mat-label> Date</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                   
+                   
+                </mat-card-content>
+
+                <mat-card-actions>
+                  <button mat-button>
+                  <img src="assets/refresh.png" alt=""> &nbsp;&nbsp;
+                  Update</button>
+                </mat-card-actions>
+
+            </mat-card>
+
+        </div>
+<!------------------------------More Section -------------------------------------------->
+        <div class="col-md-4">
+            
+            <mat-card class="title-space">
+
+                <mat-accordion  class="example-headers-align">
+
+                    <mat-expansion-panel hideToggle>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <img src="assets/megaphone.png" alt="">&nbsp;&nbsp;
+                            <span>More</span>
+                        </mat-panel-title>
+                        
+                      </mat-expansion-panel-header>
+                      
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                         (closed)="panelOpenState = false">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <img src="assets/inbox.png" alt="">&nbsp;&nbsp;
+                            <span>Contact Details </span>&nbsp;&nbsp;
+                            <button mat-button  (click)="openDialog()">Edit</button>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                          <!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
+                        </mat-panel-description>
+                      </mat-expansion-panel-header>
+                      <div class="more">
+                        <img src="assets/letter-s.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span>Sam K</span>
+
+                      </div>
+                     
+                     
+                    <mat-divider></mat-divider>
+                    <div class="more">
+                        <p>Language:  <span><b>English</b></span></p>
+                    </div>
+                       
+                        
+                        <mat-divider></mat-divider>
+
+                        <div class="more">
+                            <p>Email:  <span><B>samk@gmail.com</B></span></p>
+                        </div>
+
+                        <mat-divider></mat-divider>
+
+                        <div class="more">
+                          <p>Time Zone:  <span><B>Eastern Time (US & Canada)</B></span></p>
+                      </div>
+                      <mat-divider></mat-divider>
+
+                    </mat-expansion-panel>
+
+         
+   <!------------------------------- Recent Tickets-------------------------->
+
+       <mat-expansion-panel (opened)="panelOpenState = true"
+       (closed)="panelOpenState = false">
+       <mat-expansion-panel-header>
+       <mat-panel-title>
+       <img src="assets/most-recent.png" alt="">&nbsp;&nbsp;
+        <span>Recent Tickets </span>&nbsp;&nbsp;
+
+       </mat-panel-title>
+       <mat-panel-description>
+
+      </mat-panel-description>
+     </mat-expansion-panel-header>
+
+     <mat-divider></mat-divider>
+
+     <div class="more">
+       <mat-icon class="recent-tickets-color">sticky_note_2</mat-icon> &nbsp; &nbsp; &nbsp;
+         <span class="recent-tickets-color">Requesting Refund Order #164 </span>
+
+      </div>
+        <div class="more">
+         <br>
+         <p>Status:  &nbsp;  <span><b>Closed</b></span></p>
+       </div>
+      <mat-divider></mat-divider>
+
+     <div class="more">
+       <mat-icon class="recent-tickets-color">sticky_note_2</mat-icon> &nbsp; &nbsp; &nbsp;
+         <span class="recent-tickets-color">Requesting Refund Order #164 </span>
+     </div>
+
+     <div class="more">
+       <br>
+       <p>Status:  &nbsp;  <span><b>Closed</b></span></p>
+     </div>
+
+     <mat-divider></mat-divider>
+
+     <div class="more">
+       <mat-icon class="recent-tickets-color">sticky_note_2</mat-icon> &nbsp; &nbsp; &nbsp;
+         <span class="recent-tickets-color">Requesting Refund Order #164 </span>
+     </div>
+
+     <div class="more">
+       <br>
+       <p>Status:  &nbsp;  <span><b>Closed</b></span></p>
+     </div>
+
+    </mat-expansion-panel>
+       
+          <!--------------------- Linked Tickets-------------------------->
+
+          <mat-expansion-panel (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+          <mat-panel-title>
+          <img src="assets/ticket.png" alt="">&nbsp;&nbsp;
+           <span>Linked Tickets </span>&nbsp;&nbsp;
+
+          </mat-panel-title>
+          <mat-panel-description>
+
+         </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-divider></mat-divider>
+
+        <div class="more">
+          <mat-icon class="recent-tickets-color">sticky_note_2</mat-icon> &nbsp; &nbsp; &nbsp;
+            <span class="recent-tickets-color">Requesting Refund Order #164 </span>
+
+         </div>
+           <div class="more">
+            <br>
+            <p>Status:  &nbsp;  <span><b>Closed</b></span></p>
+          </div>
+         <mat-divider></mat-divider>
+
+        <div class="more">
+          <mat-icon class="recent-tickets-color">sticky_note_2</mat-icon> &nbsp; &nbsp; &nbsp;
+            <span class="recent-tickets-color">Requesting Refund Order #164 </span>
+        </div>
+
+        <div class="more">
+          <br>
+          <p>Status:  &nbsp;  <span><b>Closed</b></span></p>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="more">
+          <mat-icon class="recent-tickets-color">sticky_note_2</mat-icon> &nbsp; &nbsp; &nbsp;
+            <span class="recent-tickets-color">Requesting Refund Order #164 </span>
+        </div>
+
+        <div class="more">
+          <br>
+          <p>Status:  &nbsp;  <span><b>Closed</b></span></p>
+        </div>
+
+       </mat-expansion-panel>
+
+
+        <!------------------------- Time Logs-------------------------->
+
+        <mat-expansion-panel (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+        <img src="assets/file.png" alt="">&nbsp;&nbsp;
+         <span>Time Log</span>&nbsp;&nbsp;
+
+        </mat-panel-title>
+        
+      </mat-expansion-panel-header>
+
+     <mat-card class="todo-card">
+
+      <p>You can track your time on this ticket </p>
+      <br>
+      <button mat-flat-button color="primary">Log Time</button>
+     </mat-card>
+
+      
+
+     </mat-expansion-panel>
+
+
+
+       <!--------------------- To Do-------------------------->
+
+      <mat-expansion-panel (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          
+        <mat-panel-title>
+        <img src="assets/tasks.png" alt="">&nbsp;&nbsp;
+         <span>To-Do</span>&nbsp;&nbsp;
+
+        </mat-panel-title>
+       
+      </mat-expansion-panel-header>
+
+     <mat-card>
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <!-- <mat-label>To-do</mat-label> -->
+          <mat-icon class="add-icon">add</mat-icon>
+          <input matInput placeholder="Add a to-do" >
+        </mat-form-field>
+      </form>
+     </mat-card>
+
+    </mat-expansion-panel>
+      
+     </mat-accordion>
+     
+    </mat-card>
+  
+  </div>
+    
+  </div>
+</div>
+     </div>

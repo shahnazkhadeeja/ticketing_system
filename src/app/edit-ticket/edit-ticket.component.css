@@ -1,0 +1,15 @@
+img{
+    height: 20px;
+    width: 20px;
+}
+
+mat-card-content{
+
+    height:100vh;
+}
+.example-full-width {
+    width: 100%;
+  }
+  /* .ticket{
+    background-color: rgb(220, 220, 228);
+  } */

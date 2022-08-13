@@ -1,0 +1,53 @@
+<app-header></app-header>
+<mat-drawer-container class="example-container" autosize>
+    <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        
+        <div>
+          <router-outlet></router-outlet>
+
+        </div>
+       
+      </div>
+    
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      
+      <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p> -->
+      <!-- <button (click)="showFiller = !showFiller" mat-raised-button>
+        Menu
+      </button> -->
+      <div >
+        <mat-nav-list>
+          
+          <a mat-list-item class="menubtn" routerLink="dashboard"   matTooltip="Dashboard" [matTooltipPosition]="'above'" >
+            <mat-icon>computer</mat-icon>
+          </a>
+  
+          <a mat-list-item class="menubtn" routerLink="create" routerLinkActive="list-item-active"  matTooltip="Create Ticket" [matTooltipPosition]="'above'" >
+            <mat-icon> chat</mat-icon>
+          </a>
+          <a class="menubtn" mat-list-item routerLink="list" routerLinkActive="list-item-active" matTooltip="Ticket List" [matTooltipPosition]="'above'" >
+              <mat-icon>list_alt</mat-icon> 
+          </a>
+          <a class="menubtn" mat-list-item routerLink="task" routerLinkActive="list-item-active" matTooltip="Create Ticket" [matTooltipPosition]="'above'" >
+              <mat-icon>portrait</mat-icon>
+            
+          </a>
+          <a class="menubtn" mat-list-item routerLink="agenda" routerLinkActive="list-item-active"matTooltip="Create Ticket" [matTooltipPosition]="'above'">
+              <mat-icon>portrait</mat-icon>
+              
+          </a>
+
+          <a class="menubtn" mat-list-item routerLink="task" routerLinkActive="list-item-active" matTooltip="Settings" [matTooltipPosition]="'above'">
+            <mat-icon>settings</mat-icon>
+          
+        </a>
+  
+      </mat-nav-list>
+      </div>
+    </mat-drawer>
+  
+    
+  </mat-drawer-container>

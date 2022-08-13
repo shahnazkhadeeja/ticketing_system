@@ -1,0 +1,15 @@
+/* nav{
+    background-color: #7875B5;
+}
+a{
+    color:white
+} */
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .header{
+    background-color:#7875B5 ;
+  }
+  .menu{
+    color:whitesmoke
+  }

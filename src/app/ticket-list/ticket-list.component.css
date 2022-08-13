@@ -1,0 +1,48 @@
+.cards{
+    /* width:80%; */
+    height:60%;
+    margin-left: 20px;
+    background-color: transparent;
+}
+b{
+    box-sizing: content-box;
+}
+.align{
+    margin-left: 20px;
+}
+.small_col1{
+
+    background-color: yellow;
+}
+.small_col2{
+
+    background-color:green;
+}
+.card{
+
+    width:30%;
+    height:100%;
+    margin-left: 20px;
+}
+.example-full-width {
+    width: 100%;
+  }
+  h3{
+    text-align: center;
+  }
+
+  .span-style{
+    height:1px;
+    width:1px;
+  }
+  /* .btn-sm{
+    height: 1rem;
+    width: 100%;
+  } */
+  .btn-align{
+    position: absolute;
+  top:50%;
+  right: 0;
+  width: 120px;
+  transform: translateY(-50%);
+  }

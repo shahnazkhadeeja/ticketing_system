@@ -1,0 +1,23 @@
+.example-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    /* display: flex; */
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .example-sidenav-content button{
+    margin-top: 0;
+  }
+  .example-sidenav {
+    padding: 20px;
+    width:100px;
+    background-color: rgb(36, 37, 37);
+  }
+  .menubtn{
+  color:aliceblue
+ }

@@ -1,0 +1,40 @@
+<h1>Dash Board</h1>
+<div>
+
+<app-linechart-area ></app-linechart-area>
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div class="cards d-flex flex-sm-row ">
+    <div class="item p-4">
+        <mat-card>
+            <app-card label="New Users" total="12k" percentage="50">
+            </app-card>
+        </mat-card>
+    </div>
+    <div class="item  p-4">
+        <mat-card>`
+            <app-card label="Users Retention" total="10k" percentage="40">
+            </app-card>
+        </mat-card>
+    </div>
+    <div class="item p-4">
+        <mat-card>
+            <app-card label="Users Engagement" total="8k" percentage="30">
+            </app-card></mat-card>
+    </div>
+  
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="d-flex flex-sm-row">
+<div class="w-50">
+    <app-table></app-table>
+</div>
+<div class="w-50 p-4">
+    <app-pie-chart></app-pie-chart>
+</div>
+
+</div>

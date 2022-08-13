@@ -1,0 +1,15 @@
+.item{
+    width:30%;
+    min-width: 0;
+}
+
+
+@media screen and (max-width:768px){
+    .card{
+        flex-direction: column !important;
+    }
+
+    .item{
+        width:100%
+    }
+}
